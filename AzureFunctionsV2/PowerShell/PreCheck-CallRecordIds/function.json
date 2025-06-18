@@ -1,0 +1,26 @@
+{
+    "bindings": [
+        {
+            "name": "QueueItem",
+            "type": "queueTrigger",
+            "direction": "in",
+            "queueName": "call-record-ids-precheck",
+            "connection": "AzureWebJobsStorage"
+        },
+        {
+            "type": "queue",
+            "direction": "out",
+            "name": "outputQueueItemPrecheckRetry",
+            "queueName": "call-record-ids-precheck",
+            "connection": "AzureWebJobsStorage"
+        },
+        {
+            "type": "queue",
+            "direction": "out",
+            "name": "outputQueueItemProcess",
+            "queueName": "call-record-ids-process",
+            "connection": "AzureWebJobsStorage"
+        }
+
+    ]
+}

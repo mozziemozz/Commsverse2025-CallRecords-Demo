@@ -1,0 +1,18 @@
+{
+    "bindings": [
+        {
+            "name": "QueueItem",
+            "type": "queueTrigger",
+            "direction": "in",
+            "queueName": "call-record-ids-process",
+            "connection": "AzureWebJobsStorage"
+        },
+        {
+            "type": "queue",
+            "direction": "out",
+            "name": "outputQueueItem",
+            "queueName": "call-record-ids-process",
+            "connection": "AzureWebJobsStorage"
+        }
+    ]
+}

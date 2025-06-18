@@ -1,0 +1,26 @@
+{
+    "bindings": [
+        {
+            "authLevel": "function",
+            "type": "httpTrigger",
+            "direction": "in",
+            "name": "Request",
+            "methods": [
+                "get",
+                "post"
+            ]
+        },
+        {
+            "type": "queue",
+            "direction": "out",
+            "name": "outputQueueItem",
+            "queueName": "presence-test",
+            "connection": "AzureWebJobsStorage"
+        },
+        {
+            "type": "http",
+            "direction": "out",
+            "name": "Response"
+        }
+    ]
+}
